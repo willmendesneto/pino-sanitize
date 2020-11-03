@@ -1,0 +1,38 @@
+{
+  "name": "pino-sanitize",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Formats pino messages removing UUIDs, HASHES and Query String",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willmendesneto/pino-sanitize.git"
+  },
+  "keywords": [
+    "pino",
+    "pinojs",
+    "logger",
+    "logdna",
+    "tranformer"
+  ],
+  "main": "index.js",
+  "bin": {
+    "pino-sanitize": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "lib/utils.js",
+    "*.md"
+  ],
+  "scripts": {
+    "test": "tap --100 'test/**/*.test.js' --branches=80 --functions=80 --lines=80 --statements=80"
+  },
+  "dependencies": {
+    "pump": "3.0.0",
+    "split2": "2.2.0",
+    "through2": "2.0.3"
+  },
+  "devDependencies": {
+    "pino": "^6.0.0",
+    "tap": "^14.10.7"
+  }
+}
