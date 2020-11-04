@@ -54,21 +54,21 @@ tap.test('sanitizeQueryString', (t) => {
     const msg = 'Find more about it at http://www.example.com?huehue=true&hello=world website';
     const str = sanitizeQueryString(msg);
 
-    t.is(str, 'Find more about it at http://www.example.com website');
+    t.is(str, 'Find more about it at http://www.example.com?:query-string website');
   });
 
   t.test('returns string without query string if HTTPS', async (t) => {
     const msg = 'Find more about it at https://www.example.com?huehue=true&hello=world website';
     const str = sanitizeQueryString(msg);
 
-    t.is(str, 'Find more about it at https://www.example.com website');
+    t.is(str, 'Find more about it at https://www.example.com?:query-string website');
   });
 
   t.test('returns string without query string if www', async (t) => {
     const msg = 'Find more about it at www.example.com?huehue=true&hello=world website';
     const str = sanitizeQueryString(msg);
 
-    t.is(str, 'Find more about it at www.example.com website');
+    t.is(str, 'Find more about it at www.example.com?:query-string website');
   });
 
   t.end();
