@@ -1,6 +1,6 @@
 {
   "name": "pino-sanitize",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Formats pino messages removing UUIDs, HASHES and Query String",
   "repository": {
