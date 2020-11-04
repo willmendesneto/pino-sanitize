@@ -27,6 +27,7 @@
     "test": "tap --100 'test/**/*.test.js' --branches=80 --functions=80 --lines=80 --statements=80"
   },
   "dependencies": {
+    "args": "^5.0.1",
     "pump": "3.0.0",
     "split2": "2.2.0",
     "through2": "2.0.3"

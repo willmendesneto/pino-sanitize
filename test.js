@@ -35,4 +35,4 @@ pino.debug('this is a "debug" statement with "');
 
 pino.info('hello world');
 
-pino.info(`API CALLED: www.test.com/${uuid}/user/7627:${hash}?test=true with HTTP Status 200`);
+pino.info(`API CALLED: www.test.com/${uuid}/user/:${hash}/7627?test=true with HTTP Status 200`);

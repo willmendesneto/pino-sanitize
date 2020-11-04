@@ -10,18 +10,18 @@ const { sanitizeQueryString, sanitizeHash, sanitizeUUID } = require('./lib/utils
 
 args
   .option(['u', 'uuid'], 'Filter log removing UUID (defaults to `false`)')
-  .option(['h', 'hash'], 'Filter log removing UUID (defaults to `false`)')
+  .option(['h', 'hash'], 'Filter log removing HASH (defaults to `false`)')
   .option(['q', 'qs'], 'Filter log removing Query String (defaults to `false`)')
   .option(
     ['k', 'keys'],
-    'Define which keys should be sanitized (`-k err,msg`) (defaults to `err,error,msg,message`)',
+    'Define which keys should be sanitized (defaults to `err,error,msg,message`)',
     'err,msg',
   );
 
 const sanitize = (log, opts) => {
   let sanitizedLog = '';
   if (opts.qs) {
-    sanitizedLog = sanitizeQueryString(log);
+    sanitizedLog = sanitizeQueryString(log, opts.qs);
   }
   if (opts.uuid) {
     sanitizedLog = sanitizeUUID(sanitizedLog, opts.uuid);
