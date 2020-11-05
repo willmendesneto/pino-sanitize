@@ -62,7 +62,7 @@ npm install
 ### Running the logs sample locally
 
 ```
-node test.js | node index.js
+node example.js | node index.js
 ```
 
 ### Running unit tests
